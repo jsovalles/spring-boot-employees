@@ -16,9 +16,10 @@ public class Employee {
     @Column(name = "full_name", unique = true)
     private String fullName;
 
+    @Column(name = "function_role")
     private String function;
 
-    @Column(name = "boss_id")
+    @Column(name = "boss_id", nullable = true)
     private Integer bossId;
 
 }
