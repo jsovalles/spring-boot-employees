@@ -1,0 +1,5 @@
+com\bdb\employees\EmployeesApplicationTest.class
+com\bdb\employees\facade\mapper\impl\MapperTest.class
+com\bdb\employees\business\impl\ServiceImplTest.class
+com\bdb\employees\utils\DummyMocks.class
+com\bdb\employees\facade\impl\EmployeeControllerImplTest.class
