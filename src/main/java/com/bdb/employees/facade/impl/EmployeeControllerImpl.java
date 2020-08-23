@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/employees")
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin({"http://localhost:4200","https://jsovalles.github.io"})
 public class EmployeeControllerImpl implements IEmployeeControllerImpl {
 
     @Autowired
