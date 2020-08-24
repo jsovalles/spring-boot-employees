@@ -22,7 +22,10 @@ public class Employee {
     @Column(name = "function_role")
     private String function;
 
-    @Column(name = "boss_id", nullable = true)
-    private Integer bossId;
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "boss_id")
+    private Employee boss;
+
+
 
 }

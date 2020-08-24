@@ -1,7 +1,6 @@
 package com.bdb.employees.business;
 
 import com.bdb.employees.dao.entity.Employee;
-import com.bdb.employees.facade.dto.EmployeeDTO;
 
 import java.util.List;
 

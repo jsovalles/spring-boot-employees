@@ -24,7 +24,10 @@ public class Mapper implements IMapper {
             EmployeeDTO employee = new EmployeeDTO();
             employee.setFullName(dao.getFullName());
             employee.setFunction(dao.getFunction());
-            setBoss(dao, employee);
+            employee.setBoss(new EmployeeDTO());
+            if(dao.getBoss()!=null) {
+                employee.getBoss().setFullName(dao.getBoss().getFullName());
+            }
             out.add(employee);
         }
         return out;
@@ -35,9 +38,7 @@ public class Mapper implements IMapper {
         Employee out = new Employee();
         out.setFullName(employee.getFullName());
         out.setFunction(employee.getFunction());
-        if(bossId!=null) {
-            out.setBossId(bossId);
-        }
+        out.setBoss(srv.getEmployee(bossId));
 
         return out;
     }
@@ -47,18 +48,6 @@ public class Mapper implements IMapper {
         EmployeeDTO out = new EmployeeDTO();
         out.setFullName(daoOut.getFullName());
         out.setFunction(daoOut.getFunction());
-        setBoss(daoOut,out);
-
         return out;
-    }
-
-    public EmployeeDTO setBoss(Employee dao, EmployeeDTO employee) {
-        if(dao.getBossId()!=null){
-            Employee boss = srv.getEmployee(dao.getBossId());
-            employee.setBoss(new EmployeeDTO());
-            employee.getBoss().setFullName(boss.getFullName());
-        }
-
-        return employee;
     }
 }
