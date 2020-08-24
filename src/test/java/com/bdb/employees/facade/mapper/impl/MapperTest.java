@@ -36,7 +36,7 @@ public class MapperTest {
     public void listEmployees() {
         List<Employee> dao = dummyMocks.listEmployeeDAO();
 
-        Mockito.when(srv.getEmployee(1)).thenReturn(dummyMocks.getEmployeeDAO());
+        //Mockito.when(srv.getEmployee(1)).thenReturn(dummyMocks.getEmployeeDAO());
         List<EmployeeDTO> res = mapper.listEmployees(dao);
 
         Assert.assertEquals(dao.get(0).getFullName(), res.get(0).getFullName());
@@ -51,14 +51,14 @@ public class MapperTest {
 
         Assert.assertEquals(out.getFullName(), dtoIn.getFullName());
         Assert.assertEquals(out.getFunction(), dtoIn.getFunction());
-        Assert.assertEquals(out.getBossId(), Integer.valueOf(1));
+        //Assert.assertEquals(out.getBossId(), Integer.valueOf(1));
 
     }
 
     @Test
     public void createEmployeeOut() {
         Employee dao = dummyMocks.getEmployeeDAO();
-        Mockito.when(srv.getEmployee(1)).thenReturn(dummyMocks.getEmployeeDAO());
+        //Mockito.when(srv.getEmployee(1)).thenReturn(dummyMocks.getEmployeeDAO());
         EmployeeDTO out = mapper.createEmployeeOut(dao);
 
         Assert.assertEquals(out.getFullName(), dao.getFullName());

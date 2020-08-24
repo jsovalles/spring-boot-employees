@@ -40,7 +40,7 @@ public class DummyMocks {
         Employee employee2 = new Employee();
         employee2.setFullName("Javier Espinoza");
         employee2.setFunction("Jefe de Proyectos");
-        employee2.setBossId(1);
+        employee2.setBoss(employee1);
         out.add(employee2);
 
         return out;
@@ -62,7 +62,6 @@ public class DummyMocks {
         Employee employee = new Employee();
         employee.setFullName("Jose Velez");
         employee.setFunction("Product Owner");
-        employee.setBossId(1);
 
         return employee;
 

@@ -3,7 +3,6 @@ package com.bdb.employees.business.impl;
 import com.bdb.employees.business.IServiceImpl;
 import com.bdb.employees.dao.IEmployeesDAO;
 import com.bdb.employees.dao.entity.Employee;
-import com.bdb.employees.facade.dto.EmployeeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
