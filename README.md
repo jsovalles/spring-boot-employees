@@ -9,7 +9,7 @@ Se descarga el proyecto desde GitHub y después se realiza el siguiente comando 
 ```
 mvn clean install
 ```
-**Nota**: En el caso de que no se tenga Maven instalado para la compilación del proyecto, se subió en la rama **master** el archivo target donde contiene la última compilación correspondiente al proyecto.
+**Nota**: En el caso de que no se tenga Maven instalado para la compilación del proyecto, se subió en la rama **target-build** el archivo target donde contiene la última compilación correspondiente al proyecto.
 
 Después de que el comando termine de compilar se debe realizar el siguiente comando:
 ```
